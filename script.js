@@ -11,7 +11,7 @@ const pages = [
     },
     {
       title: "Clue #2",
-      unlock: new Date("025-07-16T15:00:00+02:00"),
+      unlock: new Date("2025-07-16T13:00:00Z"),
       text: `From fright to flight, now time to sip,
   In a tavern where sailors once let stories slip.
   Monkeys once paid for a drink or two,
@@ -21,7 +21,7 @@ const pages = [
     },
     {
       title: "Clue #3",
-      unlock: new Date("025-07-16T16:30:00+02:00"),
+      unlock: new Date("2025-07-16T14:30:00Z"),
       text: `Over the water, high in the sky,
   Where swings dare you to nearly fly.
   Catch the ferry, no coins to pay,
@@ -31,7 +31,7 @@ const pages = [
     },
     {
       title: "Clue #4",
-      unlock: new Date("025-07-16T18:30:00+02:00"),
+      unlock: new Date("2025-07-16T16:30:00Z""),
       text: `Among marble halls and velvet red,
   Where trains arrive and stories are said.
   Inside a station, but quiet and grand,
@@ -43,7 +43,7 @@ const pages = [
     },
     {
       title: "Clue #5",
-      unlock: new Date("025-07-16T21:00:00+02:00"),
+      unlock: new Date("2025-07-16T19:00:00Z"),
       text: `A final door, discreet and low,
   Where only those in-the-know may go.
   Knock three times, speak your name—

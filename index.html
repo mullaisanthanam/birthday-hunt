@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Treasure Hunt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div id="app">
+    <!-- Welcome Page -->
+    <div id="page-welcome" class="page active">
+      <h1>Welcome to Your Birthday Treasure Hunt</h1>
+      <p>Your journey begins now. At each step, a new clue will be revealed when the time is right.</p>
+      <button id="start-btn">Begin the Hunt</button>
+    </div>
+
+    <!-- Clue Page -->
+    <div id="page-clue" class="page hidden">
+      <h2 id="clue-title"></h2>
+      <div id="countdown"></div>
+      <div id="clue-box" class="hidden">
+        <div class="scroll">
+          <p id="clue-text"></p>
+        </div>
+        <button id="next-btn">Next</button>
+      </div>
+    </div>
+
+    <!-- End Page -->
+    <div id="end-page" class="page hidden">
+      <h2>The End</h2>
+      <p>Happy Birthday! 🎉</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background: #fdf6e3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  #app {
+    padding: 2rem;
+  }
+  
+  .page {
+    display: none;
+  }
+  
+  .page.active {
+    display: block;
+  }
+  
+  button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    background-color: #c8ad7f;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #b2976c;
+  }
+  
+  .scroll {
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 500px;
+    background: #fffaf0;
+    border: 2px solid #d2b48c;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: left;
+    position: relative;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #countdown {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #555;
+  }
+  

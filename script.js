@@ -1,7 +1,7 @@
 const pages = [
     {
       title: "Clue #1",
-      unlock: new Date("2025-07-16T12:00:00+02:00"),
+      unlock: new Date("2025-07-16T10:00:00Z"),
       text: `A little darkness, a little fear,
   But laughter will echo while you’re here.
   Face the ghosts, the jokes, the scream—

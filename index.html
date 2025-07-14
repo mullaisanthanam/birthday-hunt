@@ -6,171 +6,65 @@
   <title>Birthday Treasure Hunt</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Playfair Display', serif;
-      background: #fdf6e3;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    #app {
-      padding: 2rem;
-    }
-
-    .page {
-      display: none;
-    }
-
-    .page.active {
-      display: block;
-    }
-
-    button {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      margin-top: 2rem;
-      cursor: pointer;
-      background-color: #c8ad7f;
-      border: none;
-      border-radius: 8px;
-      color: #fff;
-    }
-
-    .scroll {
-      margin: 2rem auto;
-      padding: 2rem;
-      max-width: 500px;
-      background: #fffaf0;
-      border: 2px solid #d2b48c;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      font-size: 1.2rem;
-      line-height: 1.5;
-      text-align: left;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    #countdown {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      color: #555;
-    }
-  </style>
 </head>
 <body>
+  <!-- Background music -->
   <audio id="bg-music" loop>
-    <source src="music.mp3" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
 
   <div id="app">
+    <!-- Welcome Screen -->
     <div id="page-welcome" class="page active">
-      <h1>Welcome to Your Birthday Treasure Hunt</h1>
-      <p>Your journey begins now. At each step, a new clue will be revealed when the time is right.</p>
-      <button id="start-btn">Begin the Hunt</button>
-    </div>
+        <h1>🕵️‍♂️ You're Invited to a Birthday Adventure</h1>
+      
+        <p><em>One unforgettable day. Five secret clues. Countless surprises.</em></p>
+      
+        <div class="invite-card">
+          <p><strong>📅 Date:</strong> Wednesday, 16 July 2025</p>
+          <p><strong>🕒 Time:</strong> The adventure begins at 14:00 sharp</p>
+          <p><strong>📍 Starting Point:</strong> A place where darkness meets laughter…</p>
+          <p><strong>🎩 Dress Code:</strong> Smart casual ✨</p>
+          <p><strong>🎒 What to bring:</strong> The heart of an adventurer, the mind of a detective and shoes made for mischief.</p>
+        </div>
+      
+        <p><em>The first clue will appear when the clock strikes.  
+        Your mission, should you choose to accept it… begins now.</em></p>
+      
+        <button id="start-btn">Start the Hunt</button>
+      </div>
+      
 
+    <!-- Clue Page -->
     <div id="page-clue" class="page">
       <h2 id="clue-title"></h2>
       <div id="countdown"></div>
+
       <div id="clue-box" class="hidden">
         <div class="scroll">
           <p id="clue-text"></p>
+          <button id="hint-btn">Need a hint?</button>
+          <p id="clue-hint" class="hidden"></p>
+          <button id="reveal-answer-btn">Reveal Answer</button>
+          <p id="clue-answer" class="hidden"></p>
         </div>
-        <button id="next-btn">Next</button>
+
+        <div>
+          <button id="prev-btn">Previous</button>
+          <button id="next-btn">Next</button>
+        </div>
       </div>
     </div>
 
+    <!-- End Page -->
     <div id="end-page" class="page">
       <h2>The End</h2>
       <p>Happy Birthday! 🎉</p>
     </div>
   </div>
+  
 
-  <script>
-    const pages = [
-      {
-        title: "Clue #1",
-        unlock: new Date("2025-07-14T15:30:00+02:00"),
-        text: "From fright to flight, now time to sip,\nIn a tavern where sailors once let stories slip.\nMonkeys once paid for a drink or two,\nNow find this bar, its name’s your clue."
-      },
-      {
-        title: "Clue #2",
-        unlock: new Date("2025-07-14T17:00:00+02:00"),
-        text: "Over the water, high in the sky,\nWhere swings dare you to nearly fly.\nCatch the ferry, no coins to pay,\nYour next thrill is just across the way."
-      },
-      {
-        title: "Clue #3",
-        unlock: new Date("2025-07-14T19:00:00+02:00"),
-        text: "Among marble halls and velvet red,\nWhere trains arrive and stories are said.\nInside a station, but quiet and grand,\nA meal awaits—not far from land.\nGo where the first class once came to unwind,\nBehind closed doors… your table you'll find."
-      },
-      {
-        title: "Clue #4",
-        unlock: new Date("2025-07-14T21:30:00+02:00"),
-        text: "A final door, discreet and low,\nWhere only those in-the-know may go.\nKnock three times, speak your name—\nA secret bar, the perfect endgame."
-      }
-    ];
-
-    let currentClue = 0;
-    const startBtn = document.getElementById("start-btn");
-    const nextBtn = document.getElementById("next-btn");
-    const clueTitle = document.getElementById("clue-title");
-    const clueText = document.getElementById("clue-text");
-    const countdownEl = document.getElementById("countdown");
-    const clueBox = document.getElementById("clue-box");
-
-    const showPage = (id) => {
-      document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
-      document.getElementById(id).classList.add("active");
-    };
-
-    const startHunt = () => {
-      document.getElementById("bg-music").play();
-      showCluePage();
-    };
-
-    const showCluePage = () => {
-      if (currentClue >= pages.length) {
-        showPage("end-page");
-        return;
-      }
-
-      const page = pages[currentClue];
-      clueTitle.textContent = page.title;
-      showPage("page-clue");
-      clueBox.classList.add("hidden");
-      updateCountdown(page.unlock);
-    };
-
-    const updateCountdown = (unlockTime) => {
-      const interval = setInterval(() => {
-        const now = new Date();
-        const diff = unlockTime - now;
-
-        if (diff <= 0) {
-          clearInterval(interval);
-          countdownEl.textContent = "Clue unlocked!";
-          clueBox.classList.remove("hidden");
-          clueText.textContent = pages[currentClue].text;
-        } else {
-          const mins = Math.floor(diff / 60000);
-          const secs = Math.floor((diff % 60000) / 1000);
-          countdownEl.textContent = `Unlocks in ${mins}m ${secs}s`;
-        }
-      }, 1000);
-    };
-
-    startBtn.addEventListener("click", startHunt);
-    nextBtn.addEventListener("click", () => {
-      currentClue++;
-      showCluePage();
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

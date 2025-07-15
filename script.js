@@ -27,7 +27,7 @@ const pages = [
   Catch the ferry, no coins to pay,
   Your next thrill is just across the way.`,
       hint: "You'll need to ride a free ferry behind Centraal.",
-      answer: "<a href='https://maps.app.goo.gl/AHnFHKHHE5R8Aan9A' target='_blank'>A'DAM Lookout</a>"
+      answer: "<a href='https://maps.app.goo.gl/AHnFHKHHE5R8Aan9A' target='_blank'>A'DAM Lookout </a>"
     },
     {
       title: "Clue #4",

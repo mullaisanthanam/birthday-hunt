@@ -31,7 +31,7 @@ const pages = [
     },
     {
       title: "Clue #4",
-      unlock: new Date("2025-07-16T16:30:00Z""),
+      unlock: new Date("2025-07-16T16:30:00Z"),
       text: `Among marble halls and velvet red,
   Where trains arrive and stories are said.
   Inside a station, but quiet and grand,

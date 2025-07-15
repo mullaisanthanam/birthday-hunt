@@ -73,7 +73,6 @@ const pages = [
   };
   
   const startHunt = () => {
-    document.getElementById("bg-music").play();
     showCluePage();
   };
   

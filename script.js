@@ -7,7 +7,8 @@ const pages = [
   Face the ghosts, the jokes, the scream—
   The day begins, like a haunted dream.`,
       hint: "It's spooky and theatrical… and underground.",
-      answer: "<a href='https://maps.app.goo.gl/NSQknoit72wkvHDS7' target='_blank'>The Amsterdam Dungeon</a>"
+      answer: `<a href="https://maps.app.goo.gl/NSQknoit72wkvHDS7" target="_blank">The Amsterdam Dungeon</a>
+<br><a href="tickets/Amsterdam_Dungeon.pdf" target="_blank">🎫 View Ticket</a>`
     },
     {
       title: "Clue #2",
@@ -27,7 +28,8 @@ const pages = [
   Catch the ferry, no coins to pay,
   Your next thrill is just across the way.`,
       hint: "You'll need to ride a free ferry behind Centraal.",
-      answer: "<a href='https://maps.app.goo.gl/AHnFHKHHE5R8Aan9A' target='_blank'>A'DAM Lookout </a>"
+      answer: `<a href="https://maps.app.goo.gl/AHnFHKHHE5R8Aan9A" target="_blank">A'DAM Lookout</a>
+<br><a href="tickets/ADAM_Lookout.pdf" target="_blank">🎫 View Ticket</a>`
     },
     {
       title: "Clue #4",
@@ -39,7 +41,8 @@ const pages = [
   Go where the first class once came to unwind,
   Behind closed doors… your table you'll find.`,
       hint: "Go to Centraal, near Track 2B.",
-      answer: "<a href='https://maps.app.goo.gl/96Di62zneCpDL2M98' target='_blank'>Grand Café Restaurant 1e Klas</a>"
+      answer: `<a href="https://maps.app.goo.gl/96Di62zneCpDL2M98" target="_blank">Grand Café Restaurant 1e Klas</a>
+<br><a href="tickets/1e_Klas.pdf" target="_blank">🎫 View Ticket</a>`
     },
     {
       title: "Clue #5",
@@ -49,7 +52,8 @@ const pages = [
   Knock three times, speak your name—
   A secret bar, the perfect endgame.`,
       hint: "Look for a speakeasy near Rembrandtplein.",
-      answer: "<a href='https://maps.app.goo.gl/2UCK8cBRnbW45Ren6' target='_blank'>Door74</a>"
+      answer: `<a href="https://maps.app.goo.gl/2UCK8cBRnbW45Ren6" target="_blank">Door74</a>
+<br><a href="tickets/Door74.pdf" target="_blank">🎫 View Ticket</a>`
     }
   ];
   

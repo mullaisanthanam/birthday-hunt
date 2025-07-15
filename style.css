@@ -82,4 +82,7 @@ body {
     font-size: 2rem;
     margin-bottom: 1rem;
   }
-  
+
+  #clue-text {
+   white-space: pre-line;
+  }
